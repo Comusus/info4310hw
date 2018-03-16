@@ -1,0 +1,90 @@
+.chartgrid {
+  stroke: #e7eef4;
+  opacity: 0.3;
+}
+svg {
+  font: 10px sans-serif;
+}
+.area {
+  fill: rgba(255,100,100,0.5);
+  clip-path: url("#clip");
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #e7eef4;
+  shape-rendering: crispEdges;
+}
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: 0.125;
+  shape-rendering: crispEdges;
+}
+/*New*/
+.chart text {
+  fill: #7f8faf;
+}
+.chartline {
+  fill: none;
+  stroke-width: 1.2px;
+  clip-path: url("#clip");
+}
+.chartprice--focus {
+  stroke-width: 2px;
+  stroke: #2980b9;
+}
+.chartgold--focus {
+  stroke-width: 2px;
+  stroke: #ffd700;
+}
+.chartoverlay {
+  opacity: 0;
+  pointer-events: all;
+}
+.charttooltip--price {
+  fill: none;
+  stroke: #f00;
+}
+.chartbars {
+  fill: #99c5df;
+  opacity: 1;
+}
+.chartrange-selection text {
+  cursor: pointer;
+  text-decoration: underline;
+  fill: #2980b9;
+}
+.chartaxis--context text {
+  fill: #7f8faf;
+}
+.chartaxis--context .tick:nth-child(odd) {
+  display: none;
+}
+.chartaxis--context path,
+.chartaxis--context line {
+  display: none;
+}
+.chartarea {
+  fill: #e6f6fe;
+  stroke: #3587bc;
+}
+.extent {
+  fill: #e2f0ff;
+  fill: #3587bc;
+  fill-opacity: 0.3;
+}
+.y.axis .tick text {
+  text-anchor: start !important;
+  fill: #7f8faf;
+}
+.y.axis .tick line {
+  display: none;
+}
+.y.axis path {
+  display: none;
+}
+
+.help {
+  /*ext-align: center;*/
+  right: 50px;
+}
