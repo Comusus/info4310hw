@@ -14,6 +14,7 @@
     y   = d3.scaleLog().range([height, 0]),
     y1  = d3.scaleLog().range([height, 0]),
     y2  = d3.scaleLog().range([height2, 0]);
+    y3 = d3.scaleLog().range([height2, 0]);
 
   var xAxis = d3.axisBottom().scale(x),
     xAxis2  = d3.axisBottom().scale(x2),
@@ -93,6 +94,7 @@
     y.domain(d3.extent(data.map(function(d) { return d.price; })));
     x2.domain(x.domain());
     y2.domain(y.domain());
+    // y3.domain(d3.extent(dataGold.map(function(d) { return d.price; })));
 
     var min = d3.min(data.map(function(d) { return d.price; }));
     var max = d3.max(data.map(function(d) { return d.price; }));
@@ -110,6 +112,7 @@
 
     var priceChart = focus.append('path')
         .datum(data)
+        // .datum(dataGold)
         .attr('class', 'chartline chartprice--focus line')
         .attr("id", "redLine")
         .attr('d', priceLine);
@@ -117,10 +120,10 @@
         console.log(data2);
 
     var goldChart = focus.append('path')
-            .datum(data2)
-            .attr('class', 'chartline chartgold--focus line')
-            .attr("id", "blueLine")
-            .attr('d', priceLine);
+        .datum(dataGold)
+        .attr('class', 'chartline chartgold--focus line')
+        .attr("id", "blueLine")
+        .attr('d', priceLine);
 
     focus.append('g')
         .attr('class', 'x axis')
@@ -244,6 +247,7 @@ svg.append("text")
       x.domain(selection.map(x2.invert, x2));
 
       priceChart.attr('d', priceLine);
+      goldChart.attr('d', priceLine);
       focus.select('.x.axis').call(xAxis);
       focus.select('.y.axis').call(yAxis);
     }
