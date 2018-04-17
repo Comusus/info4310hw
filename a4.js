@@ -213,9 +213,9 @@ $(document).ready(() => {
     catsByPop.slice(0, 10).forEach(c => {
       $('.cat-filter-container').append(
         `
-        <button type="button" class="btn btn-secondary m-2" id="cat-toggle-${c[0]}" style="width: 110px;">
-          <img style="width: 68px;" src="icons/${c[0]}.png"></img>
-          <div>${c[1]}</div>
+        <button type="button" class="btn btn-secondary m-2" id="cat-toggle-${c[0]}" style="width: 70px;">
+          <img style="width: 30px;" src="icons/${c[0]}.png"></img>
+          <div style="font-size: 50%;">${c[1]}</div>
         </button>`
       );
       $(`#cat-toggle-${c[0]}`).click((e) => {
