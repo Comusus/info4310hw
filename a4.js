@@ -211,12 +211,12 @@ $(document).ready(() => {
 
 
   const bindFilters = () => {
-    catsByPop.slice(0, 16).forEach(c => {
+    catsByPop.slice(0, 18).forEach(c => {
       $('.cat-filter-container').append(
         `
-        <button type="button" class="btn btn-secondary m-2" id="cat-toggle-${c[0]}" style="width: 70px;">
+        <button type="button" class="btn btn-secondary m-2" id="cat-toggle-${c[0]}" style="width: 52px;">
           <img style="width: 16px;" src="icons/${c[0]}.png"></img>
-          <div style="font-size: 40%;">${c[1]}</div>
+          <div style="font-size: 45%;">${c[1]}</div>
         </button>`
       );
       $(`#cat-toggle-${c[0]}`).click((e) => {
