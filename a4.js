@@ -98,6 +98,7 @@ $(document).ready(() => {
           <div class="h5">${feature.properties.name}</div>
           <div class="text-secondary mb-2">${badges}</div>
           <div>${stars} (${feature.properties.review_count}) <a href="${feature.properties.url}" target="_blank"><img class="icon" src="icons/yelp-icon2.png"></a></div>
+          <i>${feature.properties.snippet_text}</i></div>
         </div>
       </div>`
     );
